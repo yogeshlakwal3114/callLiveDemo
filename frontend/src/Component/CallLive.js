@@ -78,7 +78,7 @@ const CallLive = () => {
 
     try {
       const response = await fetch(
-        "http://localhost:8000/transcribe_and_chat",
+        "https://calllivedemo.onrender.com/transcribe_and_chat",
         {
           method: "POST",
           body: formData,
