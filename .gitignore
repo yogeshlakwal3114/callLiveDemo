@@ -1,3 +1,7 @@
+.gitignore
+
+backend/__pycache__
+backend/venv
 backend/.env
 
 # dependencies

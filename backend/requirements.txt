@@ -1,0 +1,9 @@
+fastapi
+pydantic
+openai
+qdrant-client
+langchain-text-splitters
+sentence-transformers
+python-dotenv
+pypdf2
+python-multipart
