@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Container, Row, Col, Form, Button, Spinner } from "react-bootstrap";
-// import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./Home.css";  
 
@@ -9,7 +9,7 @@ const HomePage = () => {
   const [systemPrompt, setSystemPrompt] = useState("");
   const [knowledgeBase, setKnowledgeBase] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
-    // const navigate = useNavigate();
+  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -30,10 +30,10 @@ const HomePage = () => {
         console.error("Submission failed");
       } else {
         console.log("Form submitted successfully");
-        //navigate("/chat");;
+        navigate("/chat");;
       }
     } catch (error) {
-      console.error("Error submitting form:", error);
+      console.error("Error in submitting form:", error);
     } finally {
       setIsLoading(false);
     }
