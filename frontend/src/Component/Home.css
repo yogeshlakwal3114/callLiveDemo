@@ -1,0 +1,50 @@
+.shiny-background {
+    background: linear-gradient(to right, #f0f4f8, #d0e0e8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .shiny-background .container {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  h2 {
+    color: #4a90e2;
+    text-align: left;
+  }
+  
+  button {
+    border-radius: 5px;
+    padding: 12px 25px;
+    font-size: 16px;
+  }
+  
+  button:disabled {
+    background-color: #6c757d;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+    transition: 0.3s;
+  }
+  
+  .form-group {
+    text-align: left;
+  }
+  
+  .form-control {
+    width: 100%;
+  }
+  
+  label {
+    font-weight: bold;
+  }
+  
+  .mb-3 {
+    margin-bottom: 1.5rem;
+  }
+  
