@@ -31,44 +31,6 @@ const CallLive = () => {
     handleTTS(initialMessage, () => handleStartRecording());
   };
 
-  // const handleAudioStop = async (audioBlob) => {
-  //   console.log("Audio recording stopped. Sending to backend...");
-  //   console.log("Audio Blob details:", audioBlob);
-
-  //   const formData = new FormData();
-  //   formData.append("file", audioBlob, "recording.wav");
-
-  //   try {
-  //     const response = await fetch("http://localhost:8000/transcribe_and_chat", {
-  //       method: "POST",
-  //       body: formData,
-  //     });
-
-  //     console.log("Backend response:", response);
-
-  //     if (response.status === 301) {
-  //       const exitMessage = "Thanks for calling Callbot.";
-  //       setMessages((prev) => [...prev, { sender: "Bot", text: exitMessage }]);
-  //       handleTTS(exitMessage, resetChat);
-  //       return;
-  //     }
-
-  //     const data = await response.json();
-  //     console.log("Transcription and response from backend:", data);
-
-  //     setMessages((prev) => [...prev, { sender: "Bot", text: data.response }]);
-  //     handleTTS(data.response, () => {
-  //       console.log("Re-enabling autoRecord after response.");
-  //       setAutoRecord(true); // Trigger next recording
-  //     });
-  //   } catch (error) {
-  //     console.error("Error communicating with backend:", error);
-  //     setMessages((prev) => [
-  //       ...prev,
-  //       { sender: "Bot", text: "Sorry, something went wrong!" },
-  //     ]);
-  //   }
-  // };
   const handleAudioStop = async (audioBlob) => {
     console.log("Audio recording stopped. Sending to backend...");
     console.log("Audio Blob details:", audioBlob);
@@ -97,7 +59,7 @@ const CallLive = () => {
       const data = await response.json();
       console.log("Transcription and response from backend:", data);
 
-      // Add the transcribed text and bot response to the chat
+      
       setMessages((prev) => [
         ...prev,
         { sender: "User", text: data.query }, // Transcribed text
